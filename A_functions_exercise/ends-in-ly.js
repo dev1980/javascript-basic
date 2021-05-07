@@ -3,7 +3,7 @@
 function endsInLy(str) {
   let secondLast = str[str.length - 2];
   let last = str[str.length - 1];
-  return secondLast==="l" &&& last === "y"
+  return secondLast === "l" && last === "y";
 }
 console.log(endsInLy("pretty")); // false
 console.log(endsInLy("instant")); // false
