@@ -5,10 +5,9 @@ function wordCount(sentence, targetWords) {
   let arr = sentence.split(" ");
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < targetWords.length; j++) {
-      if (arr[i] === targetWords[j]) {
-        count += 1;
-      }
+    word = arr[i];
+    if (targetWords.include(word)) {
+      count++;
     }
   }
   return count;
