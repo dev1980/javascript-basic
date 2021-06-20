@@ -118,23 +118,28 @@ new foo();
 // here u will get empty object.
 
 function Bicycle(cadance, speed, gear, tirePressure) {
-this.cadance = cadance;
-this.speed = speed;
-this.gear = gear;
-this.tirePressure = tirePressure;
-this.inflateTire = function(){
-    this.tirePressure += 3;
-}
-
-}
-
-let bicycle1 = new Bicycle(50,20,4,25);
-bicycle1.inflateTire();
-
-function Mechanic(name){
-this.name = name;
-}
-
-var mike = new Mechanic("Mike");
-
-mike.inflateTire.call(bicycle1)
+    this.cadance = cadance;
+    this.speed = speed;
+    this.gear = gear;
+    this.tirePressure = tirePressure;
+    this.inflateTire = function(){
+        this.tirePressure += 3;
+    }
+    
+    }
+    
+    let bicycle1 = new Bicycle(50,20,4,25);
+    bicycle1.inflateTire();
+    
+    
+    console.log(bicycle1)
+    
+    function Mechanic(name){
+    this.name = name;
+    }
+    
+    var mike = new Mechanic("Mike");
+    mike.inflateTire = bicycle1.inflateTire;
+    
+    mike.inflateTire.call(bicycle1)
+    console.log(bicycle1)

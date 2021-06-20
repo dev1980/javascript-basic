@@ -4,22 +4,24 @@
 
 function letterMap(str, obj) {
 let result = ""
+let words = str.split("")
 let k = Object.keys(obj)
-for(let i = 0; i < str.length; i++) {
-    let char = str[i]
-    for(let j = 0; j < k.length; j++) {
-        let ch = k[j]
-        if(char === ch){
-            result += obj[ch]
-        } else {
-            result += char
-        }
-    }
-   
+for(let i = 0; i < k.length; i++) {
+    let char = k[i]
+    if(str.includes(char)){
+        newChar = getChar(char, str)
+        result += newChar
+    } 
 }
 return result
 }
 
+function getChar(char, str) {
+word = ""
+for(let j= 0; j < str.length; j++){
+    
+}
+}
 
 console.log(letterMap("symbolic", { y: "i", o: "a", c: "k" })); // 'simbalik'
 console.log(letterMap("colossal", { o: "x", s: "p" })); // 'cxlxppal'
