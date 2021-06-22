@@ -26,3 +26,16 @@ console.log(arr)
 // eg function foo() { }
 // foo  holds function object and foo.prototype = prototype object
 // But if we execute the function using new keyword then it creates a new object which has propery of __proto__ and it points to prototype object
+
+function foo() {
+
+}
+
+foo.prototype = {text: "Hello world from oject", message: "I love you"}
+
+
+var newObj = new foo();
+
+console.log(newObj.__proto__)
+
+
