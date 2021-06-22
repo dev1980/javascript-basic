@@ -38,4 +38,20 @@ var newObj = new foo();
 
 console.log(newObj.__proto__)
 
+console.log(foo.prototype===newObj.__proto__)
 
+// example 
+
+function Employee(name) {
+    this.name = name;
+}
+
+Employee.prototype.playGame = function() {
+    console.log("Play hide and seek")
+}
+
+var emp1 = new Employee("Dev");
+var emp2 = new Employee("Hari");
+
+emp1.playGame();
+emp2.playGame();
