@@ -22,3 +22,7 @@ let arr = ["brham", "mahesh", 4,5];
 
 console.log(arr)
 
+// once every function execute it will careate two object. 
+// eg function foo() { }
+// foo  holds function object and foo.prototype = prototype object
+// But if we execute the function using new keyword then it creates a new object which has propery of __proto__ and it points to prototype object
