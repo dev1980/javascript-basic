@@ -55,3 +55,8 @@ var emp2 = new Employee("Hari");
 
 emp1.playGame();
 emp2.playGame();
+
+
+// Global function called object
+// Object
+// Object()
